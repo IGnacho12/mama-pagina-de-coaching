@@ -1,21 +1,27 @@
 ---
 const persona = [
   {
-    img: "/src/assets/persona.jpg",
-    name: "Nombre de la persona",
-    description: "Descripción de la persona",
+    img: "/src/assets/persons/person1.jpg",
+    name: "Arturo Javier Martínez",
+    description:
+     "Coach ontológico profesional (matrícula 9626). Postítulos en coaching deportivo, oratoria y gestión empresarial. Líder del servicio al acreditado en la delegación Formosa, y pionero en coaching ontológico deportivo en la región. Mentor y conductor de los programas Coaching Café (TV) y Área Coach (radio). Ha trabajado con empresas como Repsa Gas y Arcor Formosa. Creador del programa \"Retorno a la vida\", reconocido a nivel nacional. \"Soy un carpintero que hace coaching.\"" 
+
   },
 ];
----
 
+---
 {
   persona.map((persona) => (
-    <article class="flex flex-row">
-      <img src={persona.img} alt="Persona" />
+    <article class="flex flex-row items-center  justify-center gap-4">
+      <img 
+        src={persona.img}
+        alt="Coach"
+        class="object-cover w-[400px] h-[350px] shadow-2xl hover:scale-105 transition-all hover:rotate-3 rounded-2xl"
+      />
 
-      <section class="flex flex-col">
-        <h1>{persona.name}</h1>
-        <p>{persona.description}</p>
+      <section class="flex flex-col w-1/2">
+        <h1 class="text-4xl font-bold text-black">{persona.name}</h1>
+        <p class="text-justify text-xl font-bold">{persona.description}</p>
       </section>
     </article>
   ))

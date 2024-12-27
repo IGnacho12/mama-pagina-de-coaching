@@ -1,0 +1,101 @@
+---
+const cards = [
+  {
+    img: "/src/assets/cards/lider.svg",
+    title: "Aprendizaje",
+    description: "Crecimiento continuo a través del coaching.",
+    details: "El aprendizaje en el coaching se basa en abrir caminos para la reflexión, la generosidad y la escucha activa. Es fundamental para lograr mejoras continuas y enfrentar los desafíos organizacionales.",
+  },
+  {
+    img: "/src/assets/cards/lider.svg",
+    title: "Liderazgo",
+    description: "Liderazgo basado en empatía y claridad.",
+    details: "El liderazgo actual requiere empatía, claridad de objetivos, compromiso y responsabilidad. Los líderes deben crear entornos de confianza y colaboración, promoviendo hábitos que faciliten el crecimiento y la resolución de problemas.",
+  },
+  {
+    img: "/src/assets/cards/lider.svg",
+    title: "Identidad",
+    description: "Fortalece el sentido de pertenencia.",
+    details: "La identidad organizacional es clave para fortalecer el sentido de pertenencia y propósito. Conocer el origen y los valores del equipo impulsa el crecimiento y la productividad en todos los miembros.",
+  },
+  {
+    img: "/src/assets/cards/lider.svg",
+    title: "Valores",
+    description: "Fundamentales para guiar comportamientos eficaces.",
+    details: "Los valores organizacionales construyen un marco ético y estable, ayudando a tomar decisiones claras y orientadas a objetivos. Son esenciales para mantener la cohesión y una cultura positiva en el equipo.",
+  },
+  {
+    img: "/src/assets/cards/lider.svg",
+    title: "Alegría y Posibilidad",
+    description: "Fomenta creatividad, salud y productividad.",
+    details: "La alegría y la posibilidad en el trabajo impulsan la creatividad y motivación. Superar creencias limitantes y mantener una actitud positiva fomenta el rendimiento y la colaboración dentro de las organizaciones.",
+  },
+  {
+    img: "/src/assets/cards/lider.svg",
+    title: "Reconocimiento, Valoración y Gestión Responsable del Error",
+    description: "Aprender de los errores para mejorar.",
+    details: "El reconocimiento y la valoración son esenciales para el crecimiento personal y colectivo. La gestión responsable del error fomenta una cultura de aprendizaje continuo, donde los errores se ven como oportunidades.",
+  },
+];
+
+---
+
+<body class="flex flex-col items-center min-h-screen py-8 bg-white text-gray-700">
+  <div class="grid gap-10 pb-16 md:grid-cols-1 lg:grid-cols-3">
+    {cards.map((card) => (
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- Parte frontal -->
+          <div class="flip-card-front flex flex-col items-center justify-center p-5 bg-cover bg-center rounded-lg">
+            <img src={card.img} alt="Icono" class="w-10 h-13 mb-2" />
+            <h2 class="text-2xl font-bold text-center text-black">{card.title}</h2>
+            <p class="text-sm text-center font-bold text-[#FF4800]">{card.description}</p>
+          </div>
+          <!-- Parte trasera -->
+          <div class="flip-card-back flex flex-col items-center justify-center p-5 rounded-lg">
+            <h2 class="text-xl font-bold text-center text-white/90">{card.title}</h2>
+            <p class="text-sm text-center font-bold text-white/80">{card.details}</p>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</body>
+
+<style>
+  /* Mantener solo la perspectiva y rotación en CSS */
+  .flip-card {
+    width: 300px;
+    aspect-ratio: 13/16;
+    perspective: 2000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
+    transform-style: preserve-3d;
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #e72868, #ff4800cc);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(-180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0px 0px 10px rgba(133, 133, 133, 0.3);
+  }
+</style>

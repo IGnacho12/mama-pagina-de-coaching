@@ -1,0 +1,22 @@
+---
+const persona = [
+  {
+    img: "/src/assets/persona.jpg",
+    name: "Nombre de la persona",
+    description: "Descripción de la persona",
+  },
+];
+---
+
+{
+  persona.map((persona) => (
+    <article class="flex flex-row">
+      <img src={persona.img} alt="Persona" />
+
+      <section class="flex flex-col">
+        <h1>{persona.name}</h1>
+        <p>{persona.description}</p>
+      </section>
+    </article>
+  ))
+};

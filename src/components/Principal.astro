@@ -1,0 +1,93 @@
+---
+import Badge from "./Badge.astro";
+---
+
+<section class="flex flex-col justify-center items-center bg-slate-500">
+  <div class="mb-14">
+    <div class="flex flex-row justify-center items-center align-middle gap-6">
+      <h1 class="text-7xl font-bold">Área Coaching</h1>
+      <Badge>Consultoría</Badge>
+    </div>
+    <h2 class="font-bold italic">Coaching de Equipos</h2>
+  </div>
+  <p class="italic font-semibold w-6/12 inline">
+    <span class="inline-block align-middle mr-2">
+      <svg class="relative bottom-1 left-1 rotate-180"
+        xmlns="http://www.w3.org/2000/svg"
+        width="12"
+        height="12"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="icon icon-tabler icons-tabler-filled icon-tabler-quote"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M9 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z"
+        />
+        <path
+          d="M18 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z"
+        />
+      </svg>
+    </span>
+    Somos una consultora diseñada para potenciar el aprendizaje y el
+    liderazgo, trabajando en equipo y de manera individual, basado en
+    valores sólidos y promoviendo el crecimiento. Exploramos un mundo de
+    posibilidades mientras celebramos tus logros.
+    <span class="inline-block align-middle ml-2">
+      <svg class="relative bottom-1 right-1"
+        xmlns="http://www.w3.org/2000/svg"
+        width="12"
+        height="12"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="icon icon-tabler icons-tabler-filled icon-tabler-quote"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+          d="M9 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z"
+        />
+        <path
+          d="M18 5a2 2 0 0 1 2 2v6c0 3.13 -1.65 5.193 -4.757 5.97a1 1 0 1 1 -.486 -1.94c2.227 -.557 3.243 -1.827 3.243 -4.03v-1h-3a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-3a2 2 0 0 1 2 -2z"
+        />
+      </svg>
+    </span>
+  </p>
+</section>
+
+<style>
+  section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ocupa al menos la altura completa de la ventana */
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)),
+      url("/src/assets/bg.jpg") center/cover no-repeat;
+    color: white; /* Asegura que el texto sea visible sobre el fondo oscuro */
+  }
+
+  h1,
+  span,
+  h2 {
+    z-index: 1; /* Mantén el texto sobre el fondo */
+  }
+
+  section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Capa adicional para oscurecer el fondo */
+    z-index: 0;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  p .icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+</style>

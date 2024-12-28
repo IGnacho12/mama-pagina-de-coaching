@@ -1,15 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Principal from "../components/Principal.astro";
-import Sub from "../components/Sub.astro";
 import Content from "../components/Content.astro";
 import Card from "../components/Card.astro";
 import Presentation from "../components/Presentation.astro";
 import Quest from "../components/Quest.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <Layout title="Coaching Para Empresas">
-  <main class="pb-[500px] flex flex-col items-center justify-center">
+  <Contact />
+  <main class="pb-52 flex flex-col items-center justify-center">
     <!-- Componente Principal -->
     <Principal />
 
@@ -21,3 +22,4 @@ import Quest from "../components/Quest.astro";
     <Quest />
   </main>
 </Layout>
+

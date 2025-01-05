@@ -4,29 +4,43 @@ const persona = [
     img: "/src/assets/persons/person1.jpg",
     name: "Arturo Javier Martínez",
     description:
-     "Coach ontológico profesional (matrícula 9626). Postítulos en coaching deportivo, oratoria y gestión empresarial. Líder del servicio al acreditado en la delegación Formosa, y pionero en coaching ontológico deportivo en la región. Mentor y conductor de los programas Coaching Café (TV) y Área Coach (radio). Ha trabajado con empresas como Repsa Gas y Arcor Formosa. Creador del programa \"Retorno a la vida\", reconocido a nivel nacional. \"Soy un carpintero que hace coaching.\"" 
-
+      'Coach ontológico profesional (matrícula 9626). Postítulos en coaching deportivo, oratoria y gestión empresarial. Líder del servicio al acreditado en la delegación Formosa, y pionero en coaching ontológico deportivo en la región. Mentor y conductor de los programas Coaching Café (TV) y Área Coach (radio). Ha trabajado con empresas como Repsa Gas y Arcor Formosa. Creador del programa "Retorno a la vida", reconocido a nivel nacional. "Soy un carpintero que hace coaching."',
   },
 ];
-
 ---
 
-<h2 class="text-7xl font-bold w-full border-b-4 md:border-b-2 border-dashed  border-[#ff0808] text-center mb-9 ">Coaches</h2>
-
-
+<h2
+  class="text-7xl font-bold w-full border-b-4 md:border-b-2 border-dashed border-[#ff0808] text-center mb-9"
+>
+  Coaches
+</h2>
 
 {
   persona.map((persona) => (
     <article class="flex flex-col md:flex-row items-center justify-center gap-4">
-      <img 
+      <img
         src={persona.img}
         alt="Coach"
         class="object-cover max-w-72 aspect-square shadow-2xl hover:scale-105 transition-all hover:rotate-3 rounded-2xl md:w-1/2"
       />
 
-      <section class="flex flex-col pl-4 md:w-1/2">
-        <h1 class="text-4xl font-bold text-black text-center md:text-left">{persona.name}</h1>
-        <p class="md:text-justify text-pretty text-xl font-bold">{persona.description}</p>
+      <section class="flex flex-col pl-4 md:w-1/2 gap-3">
+        <h1 class="text-4xl font-bold text-black text-center md:text-left">
+          {persona.name}
+        </h1>
+        <p class="md:text-justify text-pretty text-lg md:text-xl font-bold">
+          Coach ontológico profesional (matrícula 9626). Postítulos en coaching
+          deportivo, oratoria y gestión empresarial. Líder del servicio al
+          acreditado en la delegación Formosa, y pionero en coaching ontológico
+          deportivo en la región.{" "}
+        </p>
+
+        <p class="md:text-justify text-pretty text-lg md:text-xl font-bold">
+          Mentor y conductor de los programas Coaching Café (TV) y Área Coach
+          (radio). Ha trabajado con empresas como Repsa Gas y Arcor Formosa.
+          Creador del programa Retorno a la vida, reconocido a nivel nacional.
+          Soy un carpintero que hace coaching.
+        </p>
       </section>
     </article>
   ))

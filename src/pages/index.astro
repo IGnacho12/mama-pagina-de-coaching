@@ -12,14 +12,17 @@ import Contact from "../components/Contact.astro";
   <Contact />
   <main class="relative pb-52 flex flex-col items-center justify-center z-10">
     <!-- Fondo que cubre toda la pantalla -->
-    <div class="absolute inset-0 -z-10 min-h-screen w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:40px_40px]"></div>
+    <div
+      class="absolute inset-0 -z-10 min-h-screen w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:40px_40px]"
+    >
+    </div>
 
     <!-- Componente Principal -->
     <Principal />
 
     <!-- Artículo con el Título y Contenido -->
     <Content />
-    
+
     <!-- Cartas que giran (6) -->
     <Card />
     <Presentation />
